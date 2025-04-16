@@ -18,7 +18,7 @@ namespace BlogAppp.Data
                     new Category { Name = "Teknoloji" },
                     new Category { Name = "Yazılım" },
                     new Category { Name = "Gündem" },
-                    new Category { Name = "Tasarım" },
+                    new Category { Name = "Yapay Zeka" },
                     new Category { Name = "Spor" }
                 );
                 await context.SaveChangesAsync();
@@ -43,36 +43,36 @@ namespace BlogAppp.Data
                 var teknoloji = context.Categories.FirstOrDefault(c => c.Name == "Teknoloji");
                 var yazılım = context.Categories.FirstOrDefault(c => c.Name == "Yazılım");
                 var gündem = context.Categories.FirstOrDefault(c => c.Name == "Gündem");
-                var tasarım = context.Categories.FirstOrDefault(c => c.Name == "Tasarım");
+                var yapayzeka = context.Categories.FirstOrDefault(c => c.Name == "Yapay Zeka");
                 var spor = context.Categories.FirstOrDefault(c => c.Name == "Spor");
                 var category = context.Categories.OrderBy(c => c.Id).First();
                 context.Blogs.AddRange(
                     new Blog
                     {
-                        Title = "Spor Yazısı",
-                        Content = "Bu bir örnek spor yazısıdır.",
+                        Title = "Havvanur Kethüda: Türkiye’nin Dünya Şampiyonu Sporcusu",
+                        Content = "Milli boksör Havvanur Kethüda, Dünya Boks Birliği Şampiyonası’nda altın madalya kazanarak bir kez daha dünya şampiyonu oldu. Karadağ’ın Budva kentinde düzenlenen şampiyonada finalde Kazak rakibi Sabina Zhaksylyk’i mağlup eden Kethüda, büyük bir zafer kazandı.",
                         CategoryId = spor?.Id ?? category.Id,
                         AppUserId = defaultUser.Id,
                         PublishDate = DateTime.Now,
-                        ImagePath = "/images/spor.jpg"
+                        ImagePath = "/images/sport.jpg"
                     },
                     new Blog
                     {
-                        Title = "Teknoloji Yazısı",
-                        Content = "Bu da teknoloji yazısıdır.",
-                        CategoryId = teknoloji?.Id ?? category.Id,
+                        Title = "DeepSeek R1: Verimliliği Yeniden Tanımlayan Yapay Zekâ Modeli",
+                        Content = "Son dönemde yapay zekâ dünyasında adından sıkça söz ettiren DeepSeek, açık kaynaklı stratejisi, güçlü performansı ve yenilikçi modelleriyle gündemdeki yerini aldı. Özellikle DeepSeek-R1 modelinin piyasaya sürülmesiyle, sektör devlerine meydan okuyan şirket, kısa sürede global teknoloji dünyasında büyük bir etki yarattı. Çin’in Hangzhou kentinde, Temmuz 2023’te kurulan DeepSeek, yapay zekâ alanındaki yenilikçi yaklaşımlarıyla sektöre hızlı bir giriş yaptı. Şirketin kurucusu Liang Wenfeng, aynı zamanda High-Flyer adlı bir hedge fonunun da kurucusudur ve bu fon, DeepSeek'in ilk destekçilerinden biri olarak şirketin doğuşunda kritik bir rol oynamıştır. Liang’ın hedefi, yapay genel zekâ (AGI) seviyesine ulaşarak insan yeteneklerini eşitleyebilen ya da aşan modeller geliştirmektir.",
+                        CategoryId = yapayzeka?.Id ?? category.Id,
                         AppUserId = defaultUser.Id,
                         PublishDate = DateTime.Now.AddDays(-1),
-                        ImagePath = "/images/teknoloji.jpg"
+                        ImagePath = "/images/yapayzeka.jpg"
                     },
                     new Blog
                     {
-                        Title = "Tasarım Yazısı",
-                        Content = "Bu da test tasarım blog yazısıdır.",
-                        CategoryId = tasarım?.Id ?? category.Id,
+                        Title = "Hizmet Sektöründe Yapay Zeka Entegrasyonu: Müşteri Deneyimini Dönüştüren Teknolojik Yenilikler",
+                        Content = "Yapay zeka , son yıllarda hizmet sektöründe büyük bir dönüşüm yaratıyor. İşletmeler, müşteri deneyimini iyileştirmek, iş süreçlerini daha verimli hale getirmek ve rekabet avantajı sağlamak amacıyla yapay zeka teknolojilerine hızla yatırım yapıyor. Ancak, bu teknolojinin entegrasyonu her zaman kolay olmuyor. Yapay zekanın potansiyelinden faydalanabilmek için işletmelerin doğru stratejilerle ilerlemesi, başarılı örnekleri analiz etmesi ve müşterilerinin ihtiyaçlarına uygun çözümler geliştirmesi kritik önem taşıyor.",
+                        CategoryId = yazılım?.Id ?? category.Id,
                         AppUserId = defaultUser.Id,
                         PublishDate = DateTime.Now.AddDays(-1),
-                        ImagePath = "/images/tasarım.jpg"
+                        ImagePath = "/images/yazılım.jpg"
                     }
                 );
 

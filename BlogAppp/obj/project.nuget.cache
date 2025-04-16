@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fj1HZQ92wGA=",
+  "dgSpecHash": "yjxdskf1Ybk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\emrea\\BlogAppp\\BlogAppp.csproj",
+  "projectFilePath": "C:\\Users\\emrea\\OneDrive\\Belgeler\\GitHub\\BlogAppp\\BlogAppp\\BlogAppp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\emrea\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\emrea\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

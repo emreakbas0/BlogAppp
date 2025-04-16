@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emrea\\BlogAppp\\BlogAppp.csproj": {}
+    "C:\\Users\\emrea\\OneDrive\\Belgeler\\GitHub\\BlogAppp\\BlogAppp\\BlogAppp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emrea\\BlogAppp\\BlogAppp.csproj": {
+    "C:\\Users\\emrea\\OneDrive\\Belgeler\\GitHub\\BlogAppp\\BlogAppp\\BlogAppp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emrea\\BlogAppp\\BlogAppp.csproj",
+        "projectUniqueName": "C:\\Users\\emrea\\OneDrive\\Belgeler\\GitHub\\BlogAppp\\BlogAppp\\BlogAppp.csproj",
         "projectName": "BlogAppp",
-        "projectPath": "C:\\Users\\emrea\\BlogAppp\\BlogAppp.csproj",
+        "projectPath": "C:\\Users\\emrea\\OneDrive\\Belgeler\\GitHub\\BlogAppp\\BlogAppp\\BlogAppp.csproj",
         "packagesPath": "C:\\Users\\emrea\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emrea\\BlogAppp\\obj\\",
+        "outputPath": "C:\\Users\\emrea\\OneDrive\\Belgeler\\GitHub\\BlogAppp\\BlogAppp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

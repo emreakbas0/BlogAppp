@@ -33,6 +33,14 @@ namespace BlogAppp.Services
             return await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, false);
         }
 
+        public async Task<IdentityResult> ChangePasswordAsync(string userId, string currentPassword, string newPassword)
+        {
+            var user = await _userManager.FindByIdAsync(userId);
+            if (user == null) return IdentityResult.Failed(new IdentityError { Description = "Kullanıcı bulunamadı." });
+
+            return await _userManager.ChangePasswordAsync(user, currentPassword, newPassword);
+        }
+
         public async Task LogoutAsync()
         {
             await _signInManager.SignOutAsync();

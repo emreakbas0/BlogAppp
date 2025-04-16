@@ -8,6 +8,8 @@ namespace BlogAppp.IServices
     {
         Task<IdentityResult> RegisterAsync(RegisterViewModel model);
         Task<SignInResult> LoginAsync(LoginViewModel model);
+        Task<IdentityResult> ChangePasswordAsync(string userId, string currentPassword, string newPassword);
+
         Task LogoutAsync();
     }
 }
