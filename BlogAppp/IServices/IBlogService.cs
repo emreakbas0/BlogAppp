@@ -11,5 +11,6 @@ namespace BlogAppp.IServices
         Task CreateBlogAsync(Blog blog);
         Task UpdateBlogAsync(Blog blog);
         Task DeleteBlogAsync(int id);
+        Task<List<Blog>> SearchBlogsAsync(string search);
     }
 }

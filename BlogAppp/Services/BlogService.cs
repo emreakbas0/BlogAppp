@@ -34,6 +34,24 @@ namespace BlogAppp.Services
             return await query.ToListAsync();
         }
 
+        public async Task<List<Blog>> SearchBlogsAsync(string search)
+        {
+            var query = _context.Blogs
+                .Include(b => b.AppUser)
+                .Include(b => b.Category)
+                .AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                search = search.ToLower();
+                query = query.Where(b =>
+                    (b.Title != null && b.Title.ToLower().Contains(search)) ||
+                    (b.Content != null && b.Content.ToLower().Contains(search)));
+            }
+
+            return await query.ToListAsync();
+        }
+
         public async Task<Blog?> GetBlogByIdAsync(int id)
         {
             return await _context.Blogs

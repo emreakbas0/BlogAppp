@@ -16,10 +16,21 @@ namespace BlogAppp.Controllers
             _categoryService = categoryService;
         }
 
-        public async Task<IActionResult> Index(int? categoryId)
+        public async Task<IActionResult> Index(int? categoryId, string? search)
         {
-            var blogs = await _blogService.GetAllBlogsAsync(categoryId);
+            List<Blog> blogs;
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                blogs = await _blogService.SearchBlogsAsync(search);
+            }
+            else
+            {
+                blogs = await _blogService.GetAllBlogsAsync(categoryId);
+            }
+
             ViewBag.Categories = await _categoryService.GetAllCategoriesAsync();
+            ViewBag.SearchTerm = search;
             return View(blogs);
         }
 
