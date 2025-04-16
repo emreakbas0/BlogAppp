@@ -1,0 +1,64 @@
+@model BlogAppp.Models.Blog
+
+@{
+    ViewData["Title"] = "Yeni Blog Ekle";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow rounded-4">
+                <div class="card-body">
+                    <h2 class="text-center mb-4">@ViewData["Title"]</h2>
+
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            <strong>Form geçerli değil, hatalar:</strong>
+                            <ul>
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="Title" class="form-label">Başlık</label>
+                            <input type="text" class="form-control" id="Title" name="Title" required />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Content" class="form-label">İçerik</label>
+                            <textarea class="form-control" id="Content" name="Content" rows="5" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="CategoryId" class="form-label">Kategori</label>
+                            <select class="form-control" id="CategoryId" name="CategoryId" required>
+                                <option disabled selected value="">Kategori seçiniz</option>
+                                @foreach (var category in (ViewBag.Categories as List<BlogAppp.Models.Category>) ?? new List<BlogAppp.Models.Category>())
+                                {
+                                    <option value="@category.Id">@category.Name</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Image" class="form-label">Görsel (Opsiyonel)</label>
+                            <input class="form-control" type="file" id="Image" name="image" />
+                            <div class="form-text text-secondary">
+                                Resim yüklemezseniz varsayılan görsel gösterilecektir.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Blogu Ekle</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
