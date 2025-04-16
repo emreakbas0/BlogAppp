@@ -2,31 +2,31 @@
 
 ![image](https://github.com/user-attachments/assets/b6d22921-002b-47f3-b8c5-4f76879c264c)
 
-Burada kullanıcı username ve şifresini girerek blog sitesine giriş yapar.
+- Burada kullanıcı username ve şifresini girerek blog sitesine giriş yapar.
 
 2 - Kayıt Sayfası
 
 ![kayıt](https://github.com/user-attachments/assets/a73857bd-7890-40d4-8df4-5233d09109b5)
 
-Burada kullanıcı gerekli bilgileri girerek kayıt olur ayrıca burada yanlış girilen bilgilerde uyarı alır.
+- Burada kullanıcı gerekli bilgileri girerek kayıt olur ayrıca burada yanlış girilen bilgilerde uyarı alır.
 
 3 - Bloglar Ana Sayfası 
 
 ![blog](https://github.com/user-attachments/assets/0d274428-5ce4-4b01-9763-b2a1f42e4475)
 
-Bu sayfada kullanıcı tüm blogları görebilir ve ayrıca filtreleme seçeneğiyle de hangi alan ile ilgili blogları okumak istiyorsa kolay bir şekilde ulaşabilir.
+- Bu sayfada kullanıcı tüm blogları görebilir ve ayrıca filtreleme seçeneğiyle de hangi alan ile ilgili blogları okumak istiyorsa kolay bir şekilde ulaşabilir.
 
 4 - Blog Ekleme Sayfası
 
 ![blog-ekleme](https://github.com/user-attachments/assets/c87f098d-1a02-4516-9973-9deb4c32a523)
 
-Bu sayfada kullanıcı başlık, içerik, kategori ve isterse resim bilgilerini girerek blogunu oluşturur eğer resim girmek istemiyorsa varsayılan resim blog için kaydedilir.
+- Bu sayfada kullanıcı başlık, içerik, kategori ve isterse resim bilgilerini girerek blogunu oluşturur eğer resim girmek istemiyorsa varsayılan resim blog için kaydedilir.
 
 5 - Blog İçerik Kısmı
 
 ![içerik](https://github.com/user-attachments/assets/effec3ae-5260-4700-b9a3-e43e93985578)
 
-Burada kullanıcı blogun üstündeki içeriği gör tuşuna tıklayarak blog ile ilgili içeriği detaylara gitmeden görebilir.
+- Burada kullanıcı blogun üstündeki içeriği gör tuşuna tıklayarak blog ile ilgili içeriği detaylara gitmeden görebilir.
 
 6 - Kategori Sayfası
 
